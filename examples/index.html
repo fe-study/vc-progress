@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./static/css/bootstrap.min.css">
+<title>demo - vc-progress</title>
+<style>
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        background: rgba(119, 129, 149, 0.8);
+    }
+    .container {
+        width: 550px;
+        padding: 20px;
+    }
+    .container label {
+        font-weight: normal;
+    }
+    .btn {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1 align="center">@Vue Component - vc-progress</h1>
+    <div class="text-center">Bootstra progress component</div>
+    <a style="display: block" class="text-center" href="https://github.com/iwaimai-bi-fe/vc-progress">view on Github</a>
+    <hr>
+
+    <div id="app" class="container">
+
+        <button class="btn btn-success btn-sm" @click="removeProgressLabel">remove progress label</button>
+        <button class="btn btn-danger btn-sm" @click="typeToDanger">type: danger</button>
+        <br>
+
+        <vc-progress
+            style="border-radius: 5px;"
+            :value="value"
+            :type="type"
+            :show-progress="showProgress"
+            :animated="animated"
+            :striped="striped"
+        >
+        </vc-progress>
+
+        <div class="form-group">
+            <label>配置组件的value属性</label>
+            <input type="text" class="form-control" placeholder="value" v-model="value" />
+        </div>
+
+        <div class="form-group">
+            <div>showProgress - (默认: false)</div>
+            <label><input type="radio" :value="bools.true" name="showProgress" v-model="showProgress">是</label>
+            <label><input type="radio" :value="bools.false" name="showProgress" v-model="showProgress">否</label>
+        </div>
+
+        <div class="form-group">
+            <div>配置组件的type</div>
+            <label><input type="radio" value="default" name="type" v-model="type">default</label>
+            <label><input type="radio" value="warning" name="type" v-model="type">warning</label>
+            <label><input type="radio" value="danger" name="type" v-model="type">danger</label>
+            <label><input type="radio" value="success" name="type" v-model="type">success</label>
+            <label><input type="radio" value="info" name="type" v-model="type">info</label>
+            <label><input type="radio" value="primary" name="type" v-model="type">primary</label>
+        </div>
+
+        <div class="form-group">
+            <div>striped - (默认: false)</div>
+            <label><input type="radio" :value="bools.true" name="striped" v-model="striped">是</label>
+            <label><input type="radio" :value="bools.false" name="striped" v-model="striped">否</label>
+        </div>
+
+        <div class="form-group">
+            <div>animated - (默认: false)</div>
+            <label><input type="radio" :value="bools.true" name="animated" v-model="animated">是</label>
+            <label><input type="radio" :value="bools.false" name="animated" v-model="animated">否</label>
+        </div>
+
+    </div>
+    <script src='../dist/example.js'></script>
+</body>
+</html>
