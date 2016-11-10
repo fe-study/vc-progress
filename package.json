@@ -1,7 +1,7 @@
 {
   "author": "indexxuan@gmail.com",
   "name": "vc-progress",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "wrapper of Bootstrap progress component by vue.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --quiet",

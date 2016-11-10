@@ -14,7 +14,7 @@
 `npm install vc-progress --save`
 
 if you are using single file `*.vue` in project, please import the component by:  
-`import vcprogress from 'vc-progress/src'`
+`import vcProgress from 'vc-progress/src/Progress.vue'`
 
 ## Demo
 

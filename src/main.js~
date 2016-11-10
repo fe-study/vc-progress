@@ -1,3 +1,0 @@
-import vcProgress from './Progress'
-
-module.export = vcProgress

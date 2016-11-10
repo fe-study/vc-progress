@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import vcProgress from '../src'
+import vcProgress from '../src/Progress.vue'
 
 new Vue({
 	el: '#app',
